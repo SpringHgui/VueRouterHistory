@@ -12,6 +12,7 @@
 		<PackageReadmeFile>README.md</PackageReadmeFile>
 		<RepositoryType>git</RepositoryType>
 		<PackageTags>vue;vuerouter;history</PackageTags>
+		<PackageLicenseFile>.\LICENSE</PackageLicenseFile>
 	</PropertyGroup>
 	<ItemGroup>
 		<FrameworkReference Include="Microsoft.AspNetCore.App" />
