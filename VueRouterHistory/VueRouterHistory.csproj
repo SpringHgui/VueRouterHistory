@@ -12,15 +12,19 @@
 		<PackageReadmeFile>README.md</PackageReadmeFile>
 		<RepositoryType>git</RepositoryType>
 		<PackageTags>vue;vuerouter;history</PackageTags>
-		<PackageLicenseFile>.\LICENSE</PackageLicenseFile>
+		<PackageLicenseFile>LICENSE</PackageLicenseFile>
 	</PropertyGroup>
 	<ItemGroup>
 		<FrameworkReference Include="Microsoft.AspNetCore.App" />
 	</ItemGroup>
 	<ItemGroup>
-	  <None Include="..\README.md">
-	    <Pack>True</Pack>
-	    <PackagePath>\</PackagePath>
-	  </None>
+		<None Include="..\README.md">
+			<Pack>True</Pack>
+			<PackagePath>\</PackagePath>
+		</None>
+		<None Include=".\LICENSE">
+			<Pack>True</Pack>
+			<PackagePath>\</PackagePath>
+		</None>
 	</ItemGroup>
 </Project>
