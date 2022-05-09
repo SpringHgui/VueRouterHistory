@@ -5,7 +5,7 @@
 
 # 使用
 - 安装nuget包
-- 在`app.UseRouting`之后添加`app.UseVueRouterHistory();`
+- 在`app.UseRouting`或`app.MapControllers`之后添加`app.UseVueRouterHistory();`
 
 ```c#
  // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
@@ -27,7 +27,7 @@ public void Configure(IApplicationBuilder app, IWebHostEnvironment env)
 
     app.UseRouting();
     
-    // 添加
+    // 添加这一行即可
     app.UseVueRouterHistory();
 
     app.UseAuthorization();
@@ -44,4 +44,4 @@ public void Configure(IApplicationBuilder app, IWebHostEnvironment env)
 - 开始体验吧。
 
 # 遇到问题
-请提交[issue](https://github.com/SpringHgui/VueRouterHistory/issues/new)
+请提交[issue](https://github.com/SpringHgui/VueRouterHistory/issues/new)给作者

@@ -50,17 +50,22 @@ namespace VueRouterHistory
             if (context.GetEndpoint() == null && IsGetOrHeadMethod(context.Request.Method))
             {
                 var path = Path.Join(_hostingEnv.WebRootPath, context.Request.Path);
+                if (File.Exists(path))
+                {
+                    await _next(context);
+                    return;
+                }
+
                 var name = Path.Combine(Path.GetDirectoryName(path)!, "index.html");
                 if (File.Exists(name))
                 {
                     context.Response.StatusCode = 200;
                     await context.Response.SendFileAsync(name);
+                    return;
                 }
             }
-            else
-            {
-                await _next(context);
-            }
+
+            await _next(context);
         }
     }
 }
