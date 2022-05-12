@@ -4,7 +4,7 @@
 用于Vue单页面应用，使用VueRouter的History模式下，通过AspNetCore提供文件服务。
 
 # 使用
-- 安装nuget包
+- 使用nuget安装`VueRouterHistory`包
 - 在`app.UseRouting`或`app.MapControllers`之后添加`app.UseVueRouterHistory();`
 
 ```c#
