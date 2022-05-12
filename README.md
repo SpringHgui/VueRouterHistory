@@ -4,8 +4,8 @@
 用于Vue单页面应用，使用VueRouter的History模式下，通过AspNetCore提供文件服务。
 
 # 使用
-- 使用nuget安装`VueRouterHistory`包
-- 在`app.UseRouting`或`app.MapControllers`之后添加`app.UseVueRouterHistory();`
+1. 使用nuget安装`VueRouterHistory`包
+2. 在`app.UseRouting`或`app.MapControllers`之后添加`app.UseVueRouterHistory();`
 
 ```c#
  // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
@@ -40,8 +40,8 @@ public void Configure(IApplicationBuilder app, IWebHostEnvironment env)
     });
 }
 ```
-- 将Vue编译后的文件放到`wwwroot`目录内
-- 开始体验吧。
+3. 将Vue编译后的文件放到`wwwroot`目录内
+4. 开始体验吧。
 
 # 遇到问题
 请提交[issue](https://github.com/SpringHgui/VueRouterHistory/issues/new)给作者
