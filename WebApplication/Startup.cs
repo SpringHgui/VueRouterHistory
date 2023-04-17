@@ -40,8 +40,6 @@ namespace WebApplication
                 app.UseHsts();
             }
 
-            //app.UseVueRouterHistory();
-
             app.UseHttpsRedirection();
 
             app.UseStaticFiles();
