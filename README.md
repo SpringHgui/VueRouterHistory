@@ -5,7 +5,7 @@
 
 # 使用
 1. 使用nuget安装`VueRouterHistory`包
-2. 在`app.UseRouting`或`app.MapControllers`之后添加`app.UseVueRouterHistory();`
+2. 在`app.UseRouting`,`app.MapControllers`和`app.UseStaticFiles()` 之后添加`app.UseVueRouterHistory();`，以提供性能。
 
 ```c#
  // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.

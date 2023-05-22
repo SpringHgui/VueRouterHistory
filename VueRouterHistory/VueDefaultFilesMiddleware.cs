@@ -47,15 +47,27 @@ namespace VueRouterHistory
             return HttpMethods.IsGet(method) || HttpMethods.IsHead(method);
         }
 
+        string[] ignoreFile = new string[] { ".mjs", ".js", ".css" };
+
         public async Task InvokeAsync(HttpContext context)
         {
             if (context.GetEndpoint() == null && IsGetOrHeadMethod(context.Request.Method))
             {
+                var ext = Path.GetExtension(context.Request.Path.Value);
+                if (ignoreFile.Contains(ext))
+                {
+                    await _next(context);
+                    return;
+                }
+
                 var subDirs = (context.Request.Path.Value ?? string.Empty).Split('/').Where(x => !string.IsNullOrEmpty(x));
 
                 var file = tryGetIndex(context, subDirs.ToArray(), subDirs.Count());
                 if (file != null)
                 {
+                    string contentType;
+                    new FileExtensionContentTypeProvider().TryGetContentType(file, out contentType);
+                    context.Response.Headers.Add("Content-Type", contentType ?? "application/octet-stream");
                     await context.Response.SendFileAsync(file);
                     return;
                 }
@@ -69,7 +81,7 @@ namespace VueRouterHistory
             string path = _hostingEnv.WebRootPath;
             for (int i = 0; i < count; i++)
             {
-                path = Path.Combine(_hostingEnv.WebRootPath, subDirs[0]);
+                path = Path.Combine(_hostingEnv.WebRootPath, subDirs[i]);
             }
 
             if (File.Exists(path))

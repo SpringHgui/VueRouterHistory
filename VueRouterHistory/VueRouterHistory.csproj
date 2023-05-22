@@ -2,7 +2,7 @@
 
 	<PropertyGroup>
 		<TargetFramework>net5.0</TargetFramework>
-		<Version>1.1.0</Version>
+		<Version>1.1.1</Version>
 		<Authors>Gui.H</Authors>
 		<Description>用于Vue单页面应用，使用VueRouter的History模式下,通过AspNetCore提供文件服务。</Description>
 		<GeneratePackageOnBuild>true</GeneratePackageOnBuild>

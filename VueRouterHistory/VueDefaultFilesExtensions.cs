@@ -13,6 +13,7 @@ namespace Microsoft.AspNetCore.Builder
     {
         /// <summary>
         /// Enables default file mapping on the current path
+        /// Should invoke after app.UseStaticFiles()
         /// </summary>
         /// <param name="app"></param>
         /// <returns></returns>
@@ -28,6 +29,7 @@ namespace Microsoft.AspNetCore.Builder
 
         /// <summary>
         /// Enables default file mapping on the current path
+        /// Should invoke after app.UseStaticFiles()
         /// </summary>
         /// <param name="app"></param>
         /// <returns></returns>
