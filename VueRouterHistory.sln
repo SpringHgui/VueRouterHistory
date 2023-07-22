@@ -3,11 +3,13 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
 VisualStudioVersion = 17.2.32422.2
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "VueRouterHistory", "VueRouterHistory\VueRouterHistory.csproj", "{62E18042-B79F-423D-A308-16B1204828B6}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "VueRouterHistory", "VueRouterHistory\VueRouterHistory.csproj", "{62E18042-B79F-423D-A308-16B1204828B6}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "samples", "samples", "{D0FC098B-E2B8-4E37-82C5-ACF10028ED3B}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WebApplication", "WebApplication\WebApplication.csproj", "{FD64B612-BA9C-4589-A6F0-606D8D342E43}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "WebApplication", "WebApplication\WebApplication.csproj", "{FD64B612-BA9C-4589-A6F0-606D8D342E43}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WebApiApplication", "WebApiApplication\WebApiApplication.csproj", "{648CEDB9-A407-486A-8795-A8E01EE52FB3}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -23,12 +25,17 @@ Global
 		{FD64B612-BA9C-4589-A6F0-606D8D342E43}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{FD64B612-BA9C-4589-A6F0-606D8D342E43}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{FD64B612-BA9C-4589-A6F0-606D8D342E43}.Release|Any CPU.Build.0 = Release|Any CPU
+		{648CEDB9-A407-486A-8795-A8E01EE52FB3}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{648CEDB9-A407-486A-8795-A8E01EE52FB3}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{648CEDB9-A407-486A-8795-A8E01EE52FB3}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{648CEDB9-A407-486A-8795-A8E01EE52FB3}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
 	EndGlobalSection
 	GlobalSection(NestedProjects) = preSolution
 		{FD64B612-BA9C-4589-A6F0-606D8D342E43} = {D0FC098B-E2B8-4E37-82C5-ACF10028ED3B}
+		{648CEDB9-A407-486A-8795-A8E01EE52FB3} = {D0FC098B-E2B8-4E37-82C5-ACF10028ED3B}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {717DFA46-C38A-4BB3-B54B-0C5C6B04AA25}
