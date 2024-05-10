@@ -12,14 +12,14 @@ using System.Threading.Tasks;
 
 namespace VueRouterHistory
 {
-    public class VueDefaultFilesMiddleware
+    public class DefaultFilesMiddleware
     {
         private readonly DefaultFilesOptions _options;
         private readonly PathString _matchUrl;
         private readonly RequestDelegate _next;
         private readonly IWebHostEnvironment _hostingEnv;
 
-        public VueDefaultFilesMiddleware(RequestDelegate next, IWebHostEnvironment hostingEnv, IOptions<DefaultFilesOptions> options)
+        public DefaultFilesMiddleware(RequestDelegate next, IWebHostEnvironment hostingEnv, IOptions<DefaultFilesOptions> options)
         {
             if (next == null)
             {

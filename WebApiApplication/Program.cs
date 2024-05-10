@@ -28,7 +28,7 @@ namespace WebApiApplication
             app.UseAuthorization();
 
             app.UseStaticFiles();
-            app.UseVueRouterHistory();
+            app.UseRouterHistory();
 
             app.MapControllers();
 

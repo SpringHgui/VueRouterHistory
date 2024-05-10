@@ -9,7 +9,7 @@ using VueRouterHistory;
 
 namespace Microsoft.AspNetCore.Builder
 {
-    public static class VueDefaultFilesExtensions
+    public static class DefaultFilesExtensions
     {
         /// <summary>
         /// Enables default file mapping on the current path
@@ -17,14 +17,14 @@ namespace Microsoft.AspNetCore.Builder
         /// </summary>
         /// <param name="app"></param>
         /// <returns></returns>
-        public static IApplicationBuilder UseVueRouterHistory(this IApplicationBuilder app)
+        public static IApplicationBuilder UseRouterHistory(this IApplicationBuilder app)
         {
             if (app == null)
             {
                 throw new ArgumentNullException(nameof(app));
             }
 
-            return app.UseMiddleware<VueDefaultFilesMiddleware>();
+            return app.UseMiddleware<DefaultFilesMiddleware>();
         }
 
         /// <summary>
@@ -33,14 +33,14 @@ namespace Microsoft.AspNetCore.Builder
         /// </summary>
         /// <param name="app"></param>
         /// <returns></returns>
-        public static IApplicationBuilder UseVueRouterHistory(this IApplicationBuilder app, DefaultFilesOptions options)
+        public static IApplicationBuilder UseRouterHistory(this IApplicationBuilder app, DefaultFilesOptions options)
         {
             if (app == null)
             {
                 throw new ArgumentNullException(nameof(app));
             }
 
-            return app.UseMiddleware<VueDefaultFilesMiddleware>(Options.Create(options));
+            return app.UseMiddleware<DefaultFilesMiddleware>(Options.Create(options));
         }
     }
 }

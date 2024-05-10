@@ -46,7 +46,7 @@ namespace WebApplication
 
             app.UseRouting();
 
-            app.UseVueRouterHistory();
+            app.UseRouterHistory();
 
             app.UseAuthorization();
 
