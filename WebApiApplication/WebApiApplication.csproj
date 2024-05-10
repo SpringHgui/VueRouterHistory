@@ -12,7 +12,7 @@
   </ItemGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\VueRouterHistory\VueRouterHistory.csproj" />
+    <ProjectReference Include="..\VueRouterHistory\RouterHistory.csproj" />
   </ItemGroup>
 
 </Project>
