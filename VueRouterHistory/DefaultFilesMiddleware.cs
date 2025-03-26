@@ -79,9 +79,14 @@ namespace VueRouterHistory
         private string tryGetIndex(HttpContext context, string[] subDirs, int count)
         {
             string path = _hostingEnv.WebRootPath;
+            if (path == null)
+            {
+                return null;
+            }
+
             for (int i = 0; i < count; i++)
             {
-                path = Path.Combine(_hostingEnv.WebRootPath, subDirs[i]);
+                path = Path.Combine(path, subDirs[i]);
             }
 
             if (File.Exists(path))
